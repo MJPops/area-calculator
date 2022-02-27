@@ -3,19 +3,34 @@ using System;
 
 namespace AreaCalculator
 {
+    /// <summary>
+    /// The class allows you to perform various calculations related to geometric shapes.
+    /// </summary>
     public class AreasCalculator
     {
-        public float GetArea(float radius)
+        /// <summary>
+        /// Calculates the area of a circle.
+        /// </summary>
+        /// <exception cref="Exception"></exception>
+        static public float GetArea(float radius)
         {
             Circle circle = new(radius);
             return circle.GetArea();
         }
-        public float GetArea(float FirstSide, float SecondSide, float ThierdSide)
+        /// <summary>
+        /// Calculates the area of a triangle.
+        /// </summary>
+        /// <exception cref="Exception"></exception>
+        static public float GetArea(float FirstSide, float SecondSide, float ThierdSide)
         {
             Triangle triangle = new(FirstSide, SecondSide, ThierdSide);
             return triangle.GetArea();
         }
-        public bool IsRightTriangle(float FirstSide, float SecondSide, float ThierdSide)
+        /// <summary>
+        /// Returns true if the triangle is a right triangle. Otherwise, it's false.
+        /// </summary>
+        /// <exception cref="Exception"></exception>
+        static public bool IsRightTriangle(float FirstSide, float SecondSide, float ThierdSide)
         {
             Triangle triangle = new(FirstSide, SecondSide, ThierdSide);
             return triangle.IsRightTriangle();
