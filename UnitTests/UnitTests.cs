@@ -12,9 +12,7 @@ namespace UnitTests
         [InlineData(15)]
         public void GetCircleAreaTest(float radius)
         {
-            AreasCalculator areasCalculator = new();
-
-            var result = areasCalculator.GetArea(radius);
+            var result = AreasCalculator.GetArea(radius);
 
             Assert.IsType<float>(result);
             Assert.Equal((float)Math.PI * radius * radius, result);
@@ -22,21 +20,18 @@ namespace UnitTests
         [Fact]
         public void GetCircleAreaTestWhitUncorrectInput()
         {
-            AreasCalculator areasCalculator = new();
-
-            Assert.Throws<Exception>(() => areasCalculator.GetArea(-10));
+            Assert.Throws<Exception>(() => AreasCalculator.GetArea(-10));
         }
 
         [Fact]
         public void GetTriangleAreaTest()
         {
-            AreasCalculator areasCalculator = new();
             float halfPerimeter = (3 + 5 + 2) / 2;
             float area = (float)Math.Sqrt(halfPerimeter * (halfPerimeter - 3) *
                 (halfPerimeter - 5) *
                 (halfPerimeter - 2));
 
-            var result = areasCalculator.GetArea(3, 5, 2);
+            var result = AreasCalculator.GetArea(3, 5, 2);
 
             Assert.IsType<float>(result);
             Assert.Equal(area, result);
@@ -46,9 +41,7 @@ namespace UnitTests
         [InlineData(-3, 5, 1)]
         public void GetTriangleAreaTestWhitUncorrectInput(float FirstSide, float SecondSide, float ThierdSide)
         {
-            AreasCalculator areasCalculator = new();
-
-            Assert.Throws<Exception>(() => areasCalculator.GetArea(FirstSide, SecondSide, ThierdSide));
+            Assert.Throws<Exception>(() => AreasCalculator.GetArea(FirstSide, SecondSide, ThierdSide));
         }
 
         [Theory]
@@ -57,9 +50,7 @@ namespace UnitTests
         [InlineData(4, 3, 5)]
         public void IsRightTriangleTestWithCorrectInput(float FirstSide, float SecondSide, float ThierdSide)
         {
-            AreasCalculator areasCalculator = new();
-
-            var result = areasCalculator.IsRightTriangle(FirstSide, SecondSide, ThierdSide);
+            var result = AreasCalculator.IsRightTriangle(FirstSide, SecondSide, ThierdSide);
 
             Assert.IsType<bool>(result);
             Assert.True(result);
@@ -67,9 +58,7 @@ namespace UnitTests
         [Fact]
         public void IsRightTriangleTestWithUncorrectInput()
         {
-            AreasCalculator areasCalculator = new();
-
-            var result = areasCalculator.IsRightTriangle(3, 5, 2);
+            var result = AreasCalculator.IsRightTriangle(3, 5, 2);
 
             Assert.IsType<bool>(result);
             Assert.False(result);
