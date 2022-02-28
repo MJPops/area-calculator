@@ -39,18 +39,18 @@ namespace UnitTests
         [Theory]
         [InlineData(3, 5, 9)]
         [InlineData(-3, 5, 1)]
-        public void GetTriangleAreaTestWhitUncorrectInput(float FirstSide, float SecondSide, float ThierdSide)
+        public void GetTriangleAreaTestWhitUncorrectInput(float firstSide, float secondSide, float thierdSide)
         {
-            Assert.Throws<Exception>(() => AreasCalculator.GetArea(FirstSide, SecondSide, ThierdSide));
+            Assert.Throws<Exception>(() => AreasCalculator.GetArea(firstSide, secondSide, thierdSide));
         }
 
         [Theory]
         [InlineData(3, 5, 4)]
         [InlineData(5, 4, 3)]
         [InlineData(4, 3, 5)]
-        public void IsRightTriangleTestWithCorrectInput(float FirstSide, float SecondSide, float ThierdSide)
+        public void IsRightTriangleTestWithCorrectInput(float firstSide, float secondSide, float thierdSide)
         {
-            var result = AreasCalculator.IsRightTriangle(FirstSide, SecondSide, ThierdSide);
+            var result = AreasCalculator.IsRightTriangle(firstSide, secondSide, thierdSide);
 
             Assert.IsType<bool>(result);
             Assert.True(result);

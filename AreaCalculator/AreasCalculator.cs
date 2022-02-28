@@ -21,18 +21,18 @@ namespace AreaCalculator
         /// Calculates the area of a triangle.
         /// </summary>
         /// <exception cref="Exception"></exception>
-        static public float GetArea(float FirstSide, float SecondSide, float ThierdSide)
+        static public float GetArea(float firstSide, float secondSide, float thierdSide)
         {
-            Triangle triangle = new(FirstSide, SecondSide, ThierdSide);
+            Triangle triangle = new(firstSide, secondSide, thierdSide);
             return triangle.GetArea();
         }
         /// <summary>
         /// Returns true if the triangle is a right triangle. Otherwise, it's false.
         /// </summary>
         /// <exception cref="Exception"></exception>
-        static public bool IsRightTriangle(float FirstSide, float SecondSide, float ThierdSide)
+        static public bool IsRightTriangle(float firstSide, float secondSide, float thierdSide)
         {
-            Triangle triangle = new(FirstSide, SecondSide, ThierdSide);
+            Triangle triangle = new(firstSide, secondSide, thierdSide);
             return triangle.IsRightTriangle();
         }
     }

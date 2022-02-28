@@ -8,11 +8,11 @@ namespace AreaCalculator.Models
     {
         private float[] SidesOfTriangle = new float[3];
 
-        public Triangle(float FirstSide, float SecondSide, float ThierdSide)
+        public Triangle(float firstSide, float secondSide, float thierdSide)
         {
-            SidesOfTriangle[0] = FirstSide;
-            SidesOfTriangle[1] = SecondSide;
-            SidesOfTriangle[2] = ThierdSide;
+            SidesOfTriangle[0] = firstSide;
+            SidesOfTriangle[1] = secondSide;
+            SidesOfTriangle[2] = thierdSide;
 
             if (SidesOfTriangle.Where(s => s < 0).Any())
             {
